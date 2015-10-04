@@ -2,11 +2,11 @@
 
 So basically the main goal of this challenge was to pwn the server and get the flag..
 
-We were presented by this website:
+I was presented by this website:
 
 ![alt Web400 Index] (https://i.imgur.com/E1WTkaA.png)
 
-Nothing special at first glance, however if we look closely we can see that the images are loaded from another page.
+Nothing special at first glance, however if you look closely you could see that the images were loaded from another page.
 The url was http://10.13.37.5/?id=1&usr=1 and immediately tried some SQL Injection tricks, but I got this error:
 
 ![alt Web400 Int Error] (https://i.imgur.com/yCv6sJ6.png)
