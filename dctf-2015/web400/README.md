@@ -15,7 +15,7 @@ This was strange, can I bypass this check? or there is another way to win this?
 
 After some tries I noticed that if I change the 'id' parameter for example to '2' (non existing id) I get a corrupted image as an output. I downloaded the image and opend it with an hex editor and strangely I saw this error "cat: images/2_6.jpg: No such file or directory".
 
-As you can see the php script tried to read the image, however it used 'system' function to do that, also you can see that the controled input 'id' the I changed appears in the error. This is great, I can control the input that goes straight to the 'system' function!
+As you can see the php script tried to read the image, however it used 'system' function to do that, also you can see that my controled input 'id' I changed appears in the error. This is great, I can control the input that goes straight to the 'system' function!
 
 Hm.. but wait, isn't the id input is filtered to allow only integer inputs? There are two ways they might have used to check this:
 
