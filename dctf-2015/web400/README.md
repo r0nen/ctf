@@ -37,7 +37,7 @@ $(`uname -a > /tmp/tmp123.tmp`) || cat /tmp/tmp123.tmp || echo
 ```
 
 #### The fun part! where is the flag?
-The web server was apache and the linux disto was ubuntu, so the default web root path must be: "/var/www/html", I tried to list the files there and the website was right there!
+The web server was apache and the linux distro was ubuntu, so the default web root path must be: "/var/www/html", I tried to list the files there and the website was right there!
 
 My final command:
 
