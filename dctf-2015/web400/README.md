@@ -13,7 +13,7 @@ The url was http://10.13.37.5/?id=1&usr=1 and I immediately tried some SQL Injec
 
 This was strange, can I bypass this check? or there is another way to win this?
 
-After some tries I noticed that if I change the 'id' parameter for example to '2' (non existing id) I get a corrupted image as an output. I downloaded the image and opend it with an hex editor and strangely I saw this error "cat: images/2_6.jpg: No such file or directory".
+After some tries I noticed that if I change the 'id' parameter for example to '2' (non existing id) I get a corrupted image as an output. I downloaded the image and opened it with an hex editor and strangely I saw this error "cat: images/2_6.jpg: No such file or directory".
 
 As you can see the php script tried to read the image, however it used 'system' function to do that, also you can see that my controled input 'id' I changed appears in the error. This is great, I can control the input that goes straight to the 'system' function!
 
@@ -37,7 +37,7 @@ $(`uname -a > /tmp/tmp123.tmp`) || cat /tmp/tmp123.tmp || echo
 ```
 
 #### The fun part! where is the flag?
-The web server was apache and the linux distro was ubuntu, so the default web root path must be: "/var/www/html", I tried to list the files there and the website was right there!
+The web server was Apache and the linux distro was Ubuntu, so the default web root path must be: "/var/www/html", I tried to list the files there and the website was right there!
 
 My final command:
 
