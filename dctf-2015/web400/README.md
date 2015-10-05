@@ -7,7 +7,7 @@ I was presented by this website:
 ![alt Web400 Index] (https://i.imgur.com/E1WTkaA.png)
 
 Nothing special at first glance, however if you look closely you could see that the images were loaded from another page.
-The url was http://10.13.37.5/?id=1&usr=1 and immediately tried some SQL Injection tricks, but I got this error:
+The url was http://10.13.37.5/?id=1&usr=1 and I immediately tried some SQL Injection tricks, but I got this error:
 
 ![alt Web400 Int Error] (https://i.imgur.com/yCv6sJ6.png)
 
