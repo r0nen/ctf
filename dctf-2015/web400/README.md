@@ -1,4 +1,4 @@
-# Web400 Challenge
+# D-CTF Web400 Writeup
 
 So basically the main goal of this challenge was to pwn the server and get the flag..
 
