@@ -1,2 +1,2 @@
-# ctf
+# CTF
 CTF Writeups
