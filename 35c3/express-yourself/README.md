@@ -544,6 +544,6 @@ So all we need to do is:
 So I had luck, and the CTF server was actually running Apache. I tried the exploit on it and it didn't work. The file just didn't execute as PHP... Something was wrong. The server was running the latest Ubuntu and I didn't, so I immediately installed a fresh copy and also installed the latest Apache server, PHP available. After checking the configuration I noticed that the regex responsible for catching PHP files changed, and `.pht` is not a valid extension anymore. However `.phar` was added to the list :O
 
 So I quickly changed my exploit and you can see yourself.
-![id](https://raw.githubusercontent.com/r0nen/ctf/master/35c3/express-yourself/uindended.png)
+![id](https://raw.githubusercontent.com/r0nen/ctf/master/35c3/express-yourself/unintended.png)
 
 The vendor actually pached the above vulnerabilities by just removing the access to the file manager :)
