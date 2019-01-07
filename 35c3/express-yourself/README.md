@@ -383,7 +383,7 @@ function get_files($dir_id = array(), $parameters = array())
 Looks like the `get_files` function "constructs" an SQL query. We were interested in the "order by" flow. It loops through the `$parameters['order']` and if the `$key` is not equals "upload_location_name" it just calls `$this->db->order_by` function with the `$key` variable appended to the key, and the value. I will spare you the long function, but as we assumed it doesn't sanitize the key properly and we have an SQL injection vulnerability!
 
 Here is a picture of the malicious request being sent to a local server (runs in debug mode):
-![](indended.png)
+![Sqli](indended.png)
 
 You can clearly see the 'out of context' string. From here it's a trivial exploitation:
 
@@ -544,6 +544,6 @@ So all we need to do is:
 So I had luck, and the CTF server was actually running Apache. I tried the exploit on it and it didn't work. The file just didn't execute as PHP... Something was wrong. The server was running the latest Ubuntu and I didn't, so I immediately installed a fresh copy and also installed the latest Apache server, PHP available. After checking the configuration I noticed that the regex responsible for catching PHP files changed, and `.pht` is not a valid extension anymore. However `.phar` was added to the list :O
 
 So I quickly changed my exploit and you can see yourself.
-![](uindended.png)
+![id](uindended.png)
 
 The vendor actually pached the above vulnerabilities by just removing the access to the file manager :)
