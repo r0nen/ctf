@@ -531,7 +531,7 @@ Sorry for the long function... Let's explain what's going on:
 2. Checks for hidden files and disallowed file names like .htaccess
 3. Checks for allowed file types. Firstly because our file has to be an image, it checks that our file is an actual image, but this can be bypassed by just uploading a valid image and appending extra content at the end. Next it checks the file extensions.. and this is where they use black list: `'php', 'php3', 'php4', 'php5', 'php7', 'phps', 'phtml'`.
 
-    If you know the Apache web server php configuration well you probably can guess that they forgot to filter `.pht`, which also runs as PHP!
+    If you know the Apache web server and it's php configuration well, you probably can guess that they forgot to filter `.pht`, which also runs as PHP!
 4. So the last step we have to bypass is the `do_embedded_php_check` check. They check if the file contains the `<?php` string. If it does, then they bail out. Otherwise, everything is ok. This can be easily bypassed by using a shortened version of a PHP code. For example `<?=echo '123';?>`
 
 After all of those checks, the file is uploaded to the directory we chose by the directory_id parameter..
